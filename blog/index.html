@@ -5,12 +5,11 @@ title: blog
 
 <h1>Latest Posts</h1>
 
-<ul>
-	{% for post in site.posts %}
-		<li>
-			<h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.h1Headline }}</a><h2>
-			{{ post.date }} || {{ post.category }}
-			{{ post.excerpt }}
-		</li>
-	{% endfor %}
-</ul>
+
+{% for post in site.posts %}
+	<div class="article">
+		<h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.h1Headline }}</a><h2>
+		{{ post.date }} || {{ post.category }}
+		{{ post.excerpt }}
+	</div>
+{% endfor %}
