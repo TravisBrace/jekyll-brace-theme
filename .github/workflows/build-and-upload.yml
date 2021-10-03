@@ -19,7 +19,7 @@ jobs:
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
         jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
     - name: Archive production artifact
-        uses: actions/upload-artifact@main
+      uses: actions/upload-artifact@v2
         with:
           name: site
           path: srv/jekyll/_site
