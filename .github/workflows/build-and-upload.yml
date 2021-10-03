@@ -1,4 +1,4 @@
-name: Build & Upload Site
+name: Build and Upload
 
 on:
   push:
@@ -8,27 +8,37 @@ on:
 
 jobs:
   build:
+
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
-    - uses: actions/setup-ruby@v1
-      with:
-        ruby-version: '2.7'
-
-    - name: Setup Environment.
+    - name: Build the site in the jekyll/builder container
       run: |
-        gem install jekyll bundler
-        bundle install
-        sudo apt-get install -y ncftp
-        
-    - name: Build Site with Jekyll.
-      run: JEKYLL_ENV=production bundle exec jekyll build
-    
-    - name: Upload site to FTP.
-      env: 
-        ftp_location: ${{ secrets.ftp_location }}
-        ftp_username: ${{ secrets.ftp_username }}
-        ftp_password: ${{ secrets.ftp_password }} 
-      run: |
-        ncftpput -R -v -u "$ftp_username" -p "$ftp_password" $ftp_location /public_html/*
+        docker run \
+        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+    - name: Archive production artifact
+        uses: actions/upload-artifact@main
+        with:
+          name: site
+          path: srv/jekyll/_site
+          
+  deploy:
+    name: Deploy 🚀
+    needs: build
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Checkout repository
+        uses: actions/checkout@main
+      - name: Download artifact
+        uses: actions/download-artifact@main
+        with: 
+          name: site
+          path: srv/jekyll/_site
+      - name: Sync files to hosting
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        with: 
+          server: host.fuelwebmarketing.com
+          username: jekyllcms@host.fuelwebmarketing.com
+          password: ${{ secrets.ftp_password }}
