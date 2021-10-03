@@ -22,5 +22,5 @@ jobs:
       with: 
         protocol: ftps
         server: host.fuelwebmarketing.com
-        username: jekyllcms@host.fuelwebmarketing.com
+        username: jekyllcms
         password: ${{ secrets.FTP_PASSWORD }}
