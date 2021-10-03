@@ -46,6 +46,8 @@ permalink: /blog/:year/:month/:day/:title:output_ext
 # their entries' file path in the `include:` list.
 #
 # exclude:
+#   - *_page-template.md
+#   - _posts/*_post-template.md
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/
