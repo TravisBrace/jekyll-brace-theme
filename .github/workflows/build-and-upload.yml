@@ -20,6 +20,7 @@ jobs:
     - name: Sync files to hosting
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with: 
+        protocol: ftps
         server: host.fuelwebmarketing.com
         username: jekyllcms@host.fuelwebmarketing.com
         password: ${{ secrets.ftp_password }}
