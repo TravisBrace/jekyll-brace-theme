@@ -7,38 +7,19 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
-
+  web-deploy:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v2
     - name: Build the site in the jekyll/builder container
+      uses: actions/checkout@v2
       run: |
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
         jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
-    - name: Archive production artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: site
-        path: /srv/jekyll/_site
-          
-  deploy:
-    name: Deploy 🚀
-    needs: build
-    runs-on: ubuntu-latest
-    steps: 
-      - name: Checkout repository
-        uses: actions/checkout@main
-      - name: Download artifact
-        uses: actions/download-artifact@main
-        with: 
-          name: site
-          path: ${{ github.workspace }}/_site:/srv/jekyll/_site
-      - name: Sync files to hosting
-        uses: SamKirkland/FTP-Deploy-Action@4.0.0
-        with: 
-          server: host.fuelwebmarketing.com
-          username: jekyllcms@host.fuelwebmarketing.com
-          password: ${{ secrets.ftp_password }}
+        
+    - name: Sync files to hosting
+      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      with: 
+        server: host.fuelwebmarketing.com
+        username: jekyllcms@host.fuelwebmarketing.com
+        password: ${{ secrets.ftp_password }}
