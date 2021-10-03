@@ -24,4 +24,4 @@ jobs:
         server: host.fuelwebmarketing.com
         username: jekyllcms
         password: ${{ secrets.FTP_PASSWORD }}
-        server-dir: public_html
+        server-dir: ./public_html/
