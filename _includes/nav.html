@@ -1,0 +1,16 @@
+<nav class="desktop-nav">
+	{% for link in site.data.desktop-menu.desktopmenu %}
+		{% if link.submenu[0] %}
+			<div class="dropdown-container">
+				<a href="{{ site.baseurl }}{{ link.url }}">{{ link.pagename }}</a>
+				<div class="dropdown">
+					{% for submenulink in link.submenu %}
+						<a href="{{ site.baseurl }}{{ submenulink.url }}">{{ submenulink.pagename }}</a>
+					{% endfor %}
+				</div>
+			</div>
+		{% else %}
+			<a href="{{ site.baseurl }}{{ link.url }}">{{ link.pagename }}</a>
+		{% endif %}
+	{% endfor %}
+</nav>

@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+  <head>
+		{% include header-meta-include.html %}
+    <title>{{ page.titletag }}</title>
+		<meta name="description" content="{{ page.description }}">
+		<meta name="canonical" content="{{ site.url }}{{ page.url }}">
+		{% include header-sitewide-schema.html %}
+		{% include global-css-includes.html %}
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+		<meta property="og:title" content="{{ page.titletag }}">
+		<meta property="og:description" content="{{ page.description }}">
+		<meta property="og:image" content="">
+		
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image">
+		<meta property="twitter:url" content="{{ site.url }}{{ page.url }}">
+		<meta property="twitter:title" content="{{ page.titletag }}">
+		<meta property="twitter:description" content="{{ page.description }}">
+		<meta property="twitter:image" content="">
+
+		<script type="application/ld+json">
+			{
+			"@context": "https://schema.org",
+			"@type": "BlogPosting",
+			"mainEntityOfPage": {
+			"@type": "WebPage",
+			"@id": "{{ site.url }}{{ page.url }}"
+			},
+			"headline": "h1 headline",
+			"description": "{{ page.description }}",
+			"image": "image url",  
+			"author": {
+			"@type": "Organization",
+			"name": "organization-name"
+			},  
+			"publisher": "organization-name" {
+			"@type": "Organization",
+			"name": "FIRM NAME",
+			"logo": {
+			"@type": "ImageObject",
+			"url": "image url"
+			}
+			},
+			"datePublished": "2021-08-02"
+			}
+		</script>
+  </head>
+  <body>
+		{% include nav.html %}
+		<nav class="mobile-header">{% include mobilenav.html %}</nav>
+
+		<div class="titlebar">{% include titlebar.html %}</div>
+
+		<div ckass="page-content-container">
+			<nav class="sidebar">{% include sidebar-blog.html %}</nav>
+			<main class="main-content-container">
+				<h1>{{ page.h1Headline }}</h1>
+				{{ content }}
+			</main>
+		</div>
+
+		<footer>{% include footer.html %}
+  </body>
+</html>

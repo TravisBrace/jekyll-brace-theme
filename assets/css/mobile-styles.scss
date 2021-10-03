@@ -1,0 +1,17 @@
+---
+---
+
+/*****************
+  MOBILE STYLES
+*****************/
+@media (max-width:850px) {
+  body {padding-top: 28vw;}
+  h1{font-size:8vw;}
+  h2{font-size: 5.7vw;}
+  h3 {font-size:3.8vw;}
+  .sidebar {display:none;}
+  .main-content-container {display: block;width: 90%;margin:0 auto;}
+  .copyright {height: 18vw;font-size: 3.5vw;padding-top: 5vw;}
+  .copyright span {float:left;margin-top:3vw;}
+  .copyright img {width:16vw;}
+}

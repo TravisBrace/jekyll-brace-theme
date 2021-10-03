@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+		{% include header-meta-include.html %}
+    <title>{{ page.title }}</title>
+		<meta name="description" content="{{ page.description }}">
+		<meta name="canonical" content="{{ page.canonical }}">
+		{% include header-sitewide-schema.html %}
+		{% include global-css-includes.html %}
+  </head>
+  <body>
+		{% include nav.html %}
+		<nav class="mobile-header">{% include mobilenav.html %}</nav>
+
+		<div class="titlebar">{% include titlebar.html %}</div>
+
+		<div ckass="page-content-container">
+			<nav class="sidebar">{% include sidebar.html %}</nav>
+			<main class="main-content-container">{{ content }}</main>
+		</div>
+
+		<footer>{% include footer.html %}
+  </body>
+</html>
