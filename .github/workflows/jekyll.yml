@@ -30,7 +30,7 @@ jobs:
         with:
           username: jekyllcms
           server: host.fuelwebmarketing.com
-          port: 22 # default is 22
+          port: 522 # default is 22
           ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
  
           
