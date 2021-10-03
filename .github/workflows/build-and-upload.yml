@@ -35,7 +35,7 @@ jobs:
         uses: actions/download-artifact@main
         with: 
           name: site
-          path: srv/jekyll/_site
+          path: ${{ github.workspace }}/_site:/srv/jekyll/_site
       - name: Sync files to hosting
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with: 
