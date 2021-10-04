@@ -35,7 +35,7 @@ plugins:
   - jekyll-feed
 
 # Sets the Website Permalink:
-permalink: /blog/:year/:month/:day/:title:output_ext
+permalink: /blog/:year/:month/:day/:title/
 
 # Exclude from processing.
 # The following items will not be processed, by default.
