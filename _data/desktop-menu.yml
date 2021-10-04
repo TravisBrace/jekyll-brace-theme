@@ -5,7 +5,7 @@ desktopmenu:
   - pagename: About
     url: /about.html
 
-  - pagename: Page Name 1
+  - pagename: Example Page 1
     url: /page1.html
 
   - pagename: Resources
