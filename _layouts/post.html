@@ -6,7 +6,7 @@
 		<meta name="description" content="{{ page.description }}">
 		<meta name="canonical" content="{{ site.url }}{{ page.url }}">
 		{% include header-sitewide-schema.html %}
-		{% include global-css-includes.html %}
+		
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website">
 		<meta property="og:url" content="{{ site.url }}{{ page.url }}">
@@ -29,7 +29,7 @@
 			"@type": "WebPage",
 			"@id": "{{ site.url }}{{ page.url }}"
 			},
-			"headline": "h1 headline",
+			"headline": "{{ page.h1Headline }}",
 			"description": "{{ page.description }}",
 			"image": "image url",  
 			"author": {
@@ -47,6 +47,9 @@
 			"datePublished": "2021-08-02"
 			}
 		</script>
+
+		{% include global-css-includes.css %}
+		
   </head>
   <body>
 		{% include nav.html %}
