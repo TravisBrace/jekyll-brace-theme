@@ -1,4 +1,5 @@
-
+---
+---
     function loadRecentArticles() {
               var xhttp = new XMLHttpRequest();
               xhttp.onreadystatechange = function() {
@@ -7,10 +8,10 @@
         	      var blogIndex = document.createElement('html');
                       blogIndex.innerHTML = this.responseText;
         	      
-        	      var page = document.querySelector('.column-main section.content');
+        	      var page = document.querySelector('.main-content-container .content');
         	      page.innerHTML = "";
         	      
-        	      var articles = blogIndex.querySelectorAll('.content article');
+        	      var articles = blogIndex.querySelectorAll('.main-content-container article');
         	      
         	      const urlParams = new URLSearchParams(window.location.search);
                   const pageCategory = urlParams.get('category');
@@ -29,7 +30,7 @@
         	      
                 }
               };
-              xhttp.open("GET", "/~reynalawfirm/blog/", true);
+              xhttp.open("GET", "{{ site.baseurl }}/blog/", true);
               xhttp.send();
             }
     

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: postIndex
 title: blog 
 ---
 
@@ -7,9 +7,9 @@ title: blog
 
 
 {% for post in site.posts %}
-	<div class="article">
+	<article category="{{ post.category }}">
 		<h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.h1Headline }}</a><h2>
 		{{ post.date }} || {{ post.category }}
 		{{ post.excerpt }}
-	</div>
+	</article>
 {% endfor %}
