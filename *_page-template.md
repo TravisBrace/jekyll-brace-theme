@@ -2,7 +2,6 @@
 layout: page
 title: page Title Tag goes here
 description: page Description goes here
-canonical: https://example.com/
 ---
 
 # Hello World! This is an h1
