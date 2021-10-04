@@ -6,4 +6,4 @@ category: category1
 h1Headline: this is the h1
 ---
 
-this is some paragraph textt
+this is some paragraph text
