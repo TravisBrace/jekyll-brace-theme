@@ -6,7 +6,7 @@ category: Category goes here
 h1Headline: H1 goes here
 ---
 
-this is the first paragraph. It's pretty nice eh?
+this is the first paragraph. It's pretty nice eh? Love it!
 
 This is the second paragraph, not too shabby.
 
