@@ -22,5 +22,5 @@ desktopmenu:
   - pagename: Blog
     url: /blog/
 
-  - pagename: Page Name 4
-    url: /page4.html
+  - pagename: Contact
+    url: /contact.html
