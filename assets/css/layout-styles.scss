@@ -51,14 +51,19 @@ SCROLL ANIMATIONS
 TOP NAVIGATION
 ******************/
 
-.desktop-nav {height:9.323vw;background: #183037;}
-.desktop-nav .links a {display:inline-block;color: #7E9CAD;font-size: 1.5vw;padding: 0 .4vw;text-decoration:none;}
-.desktop-nav .dropdown-container{display:inline-block;position:relative}
-.desktop-nav .dropdown-container .dropdown{position:absolute;overflow:hidden;background:#c4c4c4;}
-.desktop-nav .dropdown-container .dropdown a{display:block;}
-.desktop-nav .dropdown-container .dropdown > a:first-child{margin-top:-50vw;transition:margin-top .5s ease}
-.desktop-nav .dropdown-container:hover .dropdown > a:first-child{margin-top:0}
-
+.desktop-nav {height:6.323vw;padding-top:2vw;background: #183037;
+	.logo {display: inline-block;width: 20vw;height: 4vw;vertical-align: middle;background: #A4A4A4;margin-left: 5vw;}
+	.links {float:right;margin-top:1.2vw;margin-right:5vw;
+		a {display:inline-block;color: #7E9CAD;font-size: 1.5vw;padding: 0 .4vw;text-decoration:none;}
+	}
+	.dropdown-container {display:inline-block;position:relative;
+		.dropdown {position:absolute;overflow:hidden;background:#c4c4c4;
+			a {display:block;}
+			> a:first-child{margin-top:-50vw;transition:margin-top .5s ease}
+		}
+	}
+	.dropdown-container:hover .dropdown > a:first-child{margin-top:0}
+}
 
 /****************
 MOBILE NAV
@@ -120,8 +125,11 @@ SIDE NAVIGATION
 FOOTER
 ***********/
 
-footer{margin-top:2vw}
-.copyright{padding:1.5vw 3vw;font-size:.8vw;background:black;color:white;position:relative}
-.copyright span{float:right;margin-right:3vw;position:relative;bottom:1vw}
-.copyright a{color:white}
-.copyright a:hover{color:#961b27}
+footer{margin-top:2vw;
+	.top {height:22.522vw;background:#c4c4c4;}
+	.copyright{padding:1.5vw 3vw;font-size:.8vw;background:#183037;color:white;position:relative;
+		span{float:right;margin-right:3vw;position:relative;bottom:1vw}
+		a{color:white}
+		a:hover{color:#961b27}
+	}
+}
