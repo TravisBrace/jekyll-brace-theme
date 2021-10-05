@@ -1,7 +1,8 @@
 ---
 layout: page
 title: About
-permalink: /about/
+description: About the new Fuel Web Jekyll CMS
+titlebar: About Page
 ---
 
 This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)

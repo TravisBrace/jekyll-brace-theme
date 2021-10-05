@@ -51,12 +51,13 @@ SCROLL ANIMATIONS
 TOP NAVIGATION
 ******************/
 
-nav a{display:inline-block}
-nav .dropdown-container{display:inline-block;position:relative}
-nav .dropdown-container .dropdown{position:absolute;overflow:hidden}
-nav .dropdown-container .dropdown a{display:block}
-nav .dropdown-container .dropdown > a:first-child{margin-top:-50vw;transition:margin-top .5s ease}
-nav .dropdown-container:hover .dropdown > a:first-child{margin-top:0}
+.desktop-nav {height:9.323vw;background: #183037;}
+.desktop-nav .links a {display:inline-block;color: #7E9CAD;font-size: 1.5vw;padding: 0 .4vw;text-decoration:none;}
+.desktop-nav .dropdown-container{display:inline-block;position:relative}
+.desktop-nav .dropdown-container .dropdown{position:absolute;overflow:hidden;background:#c4c4c4;}
+.desktop-nav .dropdown-container .dropdown a{display:block;}
+.desktop-nav .dropdown-container .dropdown > a:first-child{margin-top:-50vw;transition:margin-top .5s ease}
+.desktop-nav .dropdown-container:hover .dropdown > a:first-child{margin-top:0}
 
 
 /****************
@@ -102,12 +103,16 @@ nav > div.button{position:fixed;top:13vw;z-index:8;width:100%;padding:2vw;text-a
 INTERNAL PAGES
 *****************/
 
+.titlebar {height:16.406vw;background:#c4c4c4;}
+.titlebar .title {font-size: 3.542vw;text-align: center;font-weight: 700;line-height: 16.406vw;}
+
+.main-content-container {margin-left: 5vw;}
 
 /*******************
 SIDE NAVIGATION
 *******************/
 
-.sidebar{display:inline-block;width:21%;vertical-align:top;margin:3% 3% 0 6%;border:.1vw solid;padding:2% 2%}
+.sidebar{display:inline-block;width:21%;vertical-align:top;margin:3vw 3vw 0 3vw;border:.1vw solid;padding:2% 2%}
 .sidebar a{display:block}
 
 
