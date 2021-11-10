@@ -3,8 +3,6 @@ name: Build and Upload
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
 jobs:
   web-deploy:
@@ -21,8 +19,8 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with: 
         protocol: ftps
-        server: host.fuelwebmarketing.com
-        username: jekyllcms
+        server: ${{ secrets.FTP_HOST }}
+        username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./_site/
         server-dir: ./public_html/
