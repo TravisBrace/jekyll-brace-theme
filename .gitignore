@@ -6,3 +6,4 @@ vendor
 .vscode
 *.zip
 *.xd
+.DS_Store
