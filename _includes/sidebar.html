@@ -1,1 +1,17 @@
 <h2>Practice Areas</h2>
+{% for link in site.data.sidebar-menu.sidebarmenu %}
+	{% if link.submenu[0] %}
+		<div class="dropdown-container">
+			<a href="{{ site.baseurl }}{{ link.url }}">{{ link.pagename }}</a>
+			<div class="dropdown">
+				{% for submenulink in link.submenu %}
+					<a href="{{ site.baseurl }}{{ submenulink.url }}">{{ submenulink.pagename }}</a>
+				{% endfor %}
+			</div>
+		</div>
+	{% else %}
+		<a href="{{ site.baseurl }}{{ link.url }}">{{ link.pagename }}</a>
+	{% endif %}
+{% endfor %}
+
+<script src="{{site.baseurl}}/assets/js/sidenav.html"></script>

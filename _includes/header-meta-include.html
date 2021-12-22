@@ -1,5 +1,30 @@
-<meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="">
-<link rel="icon" href="/assets/images/favicon.ico">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width">
+		<meta name="theme-color" content="">
+		<link rel="icon" href="/assets/images/favicon.ico">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    	
+
+		<title>{{ page.titletag }}</title>
+		<meta name="description" content="{{ page.description }}">
+		<meta name="canonical" content="{{ site.url }}{{ page.url }}">
+
+		{% if page.robots != null %}
+		  <meta name="robots" content="{{ page.robots }}" />
+		{% else %}
+		  <meta name="robots" content="index, follow" />
+		{% endif %}
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+		<meta property="og:title" content="{{ page.titletag }}">
+		<meta property="og:description" content="{{ page.description }}">
+		<meta property="og:image" content="">
+		
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image">
+		<meta property="twitter:url" content="{{ site.url }}{{ page.url }}">
+		<meta property="twitter:title" content="{{ page.titletag }}">
+		<meta property="twitter:description" content="{{ page.description }}">
+		<meta property="twitter:image" content="">

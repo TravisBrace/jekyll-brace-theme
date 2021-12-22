@@ -37,6 +37,28 @@ plugins:
 # Sets the Website Permalink:
 permalink: /blog/:year/:month/:day/:title:output_ext
 
+# Creates Default Frontmatter
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      titletag: "Need to add titletag: to page"
+      description: "Need to add description: to page"
+      category: "need to add category: to page"
+      h1Headline: "need to add h1Headline: to page"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: page
+      titletag: "Need to add titletag: to page"
+      description: "Need to add description: to page"
+      titlebartext: "Need to add titlebartext: to page"
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

@@ -1,0 +1,32 @@
+AddType text/html .html
+AddHandler server-parsed .html
+Options Indexes FollowSymLinks Includes
+
+ErrorDocument 404 /404.html
+
+#THIS REDIRECTS /index.html to just / UNCOMMENT AFTER SITE LAUNCH
+#RewriteEngine On
+#RewriteRule ^index\.html$ / [R=301,L]
+#RewriteRule ^(.*)/index\.html$ /$1/ [R=301,L]
+
+#<filesMatch ".(css|js|jpg|jpeg|jpg|png|gif|ico|svg|ttf|otf|woff|webp)$">
+#  Header set Cache-Control "max-age=31536000, public"
+#</filesMatch>
+
+#This Forces nonWWW HTTPS version of site. Uncomment if needed after launch
+#RewriteEngine on
+#RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+#RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+#RewriteCond %{HTTPS} !on
+#RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+#This Forces www HTTPS version of the site Uncomment if needed after launch
+#RewriteEngine On
+#RewriteCond %{HTTPS} off [OR]
+#RewriteCond %{HTTP_HOST} !^www.ENTERDOMAINHERE.com$ [NC]
+#RewriteRule ^(.*)$ https://www.ENTERDOMAINHERE.com/$1 [L,R=301]
+
+#This rewrites file extension. If needed, might have to adjust. This will change all .shtml urls to .html
+#RewriteEngine On
+#RewriteCond %{REQUEST_URI} .shtml$
+#RewriteRule ^(.*).shtml$ /$1.html [R=301,L]

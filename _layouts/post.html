@@ -2,25 +2,6 @@
 <html>
   <head>
 		{% include header-meta-include.html %}
-    	<title>{{ page.titletag }}</title>
-		<meta name="description" content="{{ page.description }}">
-		<meta name="canonical" content="{{ site.url }}{{ page.url }}">
-		{% include header-sitewide-schema.html %}
-		
-		<!-- Open Graph / Facebook -->
-		<meta property="og:type" content="website">
-		<meta property="og:url" content="{{ site.url }}{{ page.url }}">
-		<meta property="og:title" content="{{ page.titletag }}">
-		<meta property="og:description" content="{{ page.description }}">
-		<meta property="og:image" content="">
-		
-		<!-- Twitter -->
-		<meta property="twitter:card" content="summary_large_image">
-		<meta property="twitter:url" content="{{ site.url }}{{ page.url }}">
-		<meta property="twitter:title" content="{{ page.titletag }}">
-		<meta property="twitter:description" content="{{ page.description }}">
-		<meta property="twitter:image" content="">
-
 		<script type="application/ld+json">
 			{
 			"@context": "https://schema.org",
@@ -65,6 +46,6 @@
 			<nav class="sidebar">{% include sidebar-blog.html %}</nav>
 		</div>
 
-		<footer>{% include footer.html %}
+		<footer>{% include footer.html %}</footer>
   </body>
 </html>

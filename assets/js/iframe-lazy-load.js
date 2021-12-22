@@ -2,15 +2,19 @@ var iframeContainerDiv = document.querySelector('PUT SELECTOR HERE');
 
 var iframeCode = 'PUT IFRAME HTML HERE'
 
-function loadiframe() {
-    if (window.pageYOffset > 0) {
-        iframeContainerDiv.insertAdjacentHTML('afterbegin', iframeCode);
-        window.removeEventListener('scroll', loadiframe);
-    }
-}
+if (iframeContainerDiv != null) {
 
-if (window.pageYOffset <= 0) {
-    window.addEventListener('scroll', loadiframe);
-} else {
-    loadiframe();
+	function loadiframe() {
+		if (window.pageYOffset > 0) {
+	        iframeContainerDiv.insertAdjacentHTML('afterbegin', iframeCode);
+	        window.removeEventListener('scroll', loadiframe);
+	    }
+	}
+
+	if (window.pageYOffset <= 0) {
+	    window.addEventListener('scroll', loadiframe);
+	} else {
+	    loadiframe();
+	}
+
 }
