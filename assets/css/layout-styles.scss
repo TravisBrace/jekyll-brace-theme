@@ -121,8 +121,8 @@ SIDE NAVIGATION
 *******************/
 
 .sidebar{display:inline-block;width:21%;vertical-align:top;margin:3vw 3vw 0 3vw;border:.1vw solid;padding:2% 2%}
+.sidebar .dropdown {display:none;}
 .sidebar a{display:block}
-
 
 /**********
 FOOTER
