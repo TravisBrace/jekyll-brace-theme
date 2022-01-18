@@ -21,17 +21,28 @@
                   
                   for (var i = 0; i < articles.length; i++) {
                       var category = articles[i].getAttribute('category');
-                      if (category !== null && category == pageCategory) {
-                          page.innerHTML = page.innerHTML + articles[i].outerHTML;
+                      if (category !== null && category.indexOf(", ") !== -1){
+                        var categoryArray = category.split(", ");
+                        for (var k = 0; k < categoryArray.length; k++){
+                         
+                          if (pageCategory == categoryArray[k]){
+                            
+                            page.innerHTML = page.innerHTML + articles[i].outerHTML;
+                          } 
+                        }
                       }
+                      else if (category !== null && category == pageCategory){
+                          page.innerHTML = page.innerHTML + articles[i].outerHTML;
+                      } 
                   }
         	
         	      
         	      
                 }
               };
-              xhttp.open("GET", "{{ site.baseurl }}/blog/", true);
+              xhttp.open("GET", "/blog/", true);
               xhttp.send();
             }
     
     loadRecentArticles();
+
