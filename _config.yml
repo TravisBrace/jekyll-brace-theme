@@ -33,6 +33,7 @@ github_username:  jekyll
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 
 # Sets the Website Permalink:
 permalink: /blog/:year/:month/:day/:title:output_ext
@@ -58,6 +59,27 @@ defaults:
       titletag: "Need to add titletag: to page"
       description: "Need to add description: to page"
       titlebartext: "Need to add titlebartext: to page"
+  -
+    scope:                                                    
+      path: "privacy-policy"
+    values:                                                   
+      sitemap: false                                          
+  -                                                           
+    scope:                                                    
+      path: "disclaimer"
+    values:                                                   
+      sitemap: false
+  -                                                           
+    scope:                                                    
+      path: "accessibility-statement"
+    values:                                                   
+      sitemap: false                                          
+  -                                                           
+    scope:                                                    
+      path: "*_page-template"                                 
+    values:                                                   
+      sitemap: false                                          
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
