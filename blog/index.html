@@ -10,7 +10,7 @@ titlebar: Law Blog
 {% for post in site.posts %}
 	<article category="{{ post.category }}">
 		<h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.h1Headline }}</a></h2>
-		{{ post.date }} || {{ post.category }}
-		{{ post.excerpt }}
+		<div class="post-meta">{{ post.date }} || {{ post.category }}</div>
+		{{ post.content | strip_html | truncatewords: 50 }}
 	</article>
 {% endfor %}
