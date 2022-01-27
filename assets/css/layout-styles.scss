@@ -45,6 +45,19 @@ HOVER EFFECTS
 SCROLL ANIMATIONS
 *********************/
 
+@keyframes fadeIn {
+    0% {opacity:0;filter:blur(10px);}
+    100% {opacity:1;filter:blur(0px);}
+}
+.fadeIn {opacity:0;filter:blur(10px);}
+.fadeIn.active {animation:fadeIn .5s ease forwards;-webkit-animation:fadeIn .5s ease forwards;}
+
+@keyframes fadeUp {
+    0% {opacity:0;transform: translateY(2vw);filter:blur(10px);}
+    100% {transform: translateY(0);opacity:1;filter:blur(0px);}
+}
+.fadeUp {position:relative;opacity:0;transform: translateY(2vw);filter:blur(10px);}
+.fadeUp.active {animation:fadeUp .5s ease forwards;-webkit-animation:fadeUp .5s ease forwards;}
 
 
 /******************
