@@ -5,7 +5,7 @@
 		{% include header-sitewide-schema.html %}
 		{% include global-css-includes.html %}
   </head>
-  <body>
+  <body {% if page.bodyClass != null %}class="{{ page.bodyClass }}"{% endif %}>
 		{% include nav.html %}
 		<nav class="mobile-header">{% include mobilenav.html %}</nav>
 		<main>{{ content }}</main>
