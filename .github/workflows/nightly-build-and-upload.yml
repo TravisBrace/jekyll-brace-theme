@@ -1,0 +1,32 @@
+# name: Nightly Build and Upload
+
+# on:
+#   schedule:
+#     - cron: "0 4 * * 1-5"
+#   workflow_dispatch:
+
+# jobs:
+#   web-deploy:
+#     runs-on: ubuntu-latest
+#     steps:
+#     - uses: actions/checkout@v2
+#     - name: Build the site in the jekyll/builder container
+#       run: |
+#         docker run \
+#         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+#         jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+#     - name: HTML/CSS/JS Minifier
+#       uses: docker://devatherock/minify-js:1.0.3
+#       with:
+#         directory: '_site'      # Optional
+#         add_suffix: false
+        
+#     - name: Sync files to hosting
+#       uses: SamKirkland/FTP-Deploy-Action@4.3.0
+#       with: 
+#         protocol: ftps
+#         server: ${{ secrets.FTP_HOST }}
+#         username: ${{ secrets.FTP_USERNAME }}
+#         password: ${{ secrets.FTP_PASSWORD }}
+#         local-dir: ./_site/
+#         server-dir: ./public_html/

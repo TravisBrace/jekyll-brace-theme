@@ -1,7 +1,9 @@
 ---
-layout: page
-title: page Title Tag goes here
-description: page Description goes here
+layout: default
+title: Home
+description: Jekyll Framework Homepage
+canonical: https://example.com/
+permalink: /
 ---
 
 # Hello World! This is an h1

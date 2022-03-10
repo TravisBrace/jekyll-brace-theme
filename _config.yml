@@ -38,6 +38,26 @@ plugins:
 # Sets the Website Permalink:
 permalink: /blog/:year/:month/:day/:title:output_ext
 
+# Blocks future dated posts from being published early
+future: false
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Sets the Website Permalink:
+permalink: /blog/:year/:month/:day/:title/
+
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+
+sass:
+  style: comrpessed 
+
 # Creates Default Frontmatter
 defaults:
   -
@@ -59,27 +79,54 @@ defaults:
       titletag: "Need to add titletag: to page"
       description: "Need to add description: to page"
       titlebartext: "Need to add titlebartext: to page"
+#########
+# Set Inside the deafults these are pages to be excluded from the sitemap
+######
   -
-    scope:                                                    
+    scope: 
       path: "privacy-policy"
-    values:                                                   
-      sitemap: false                                          
-  -                                                           
-    scope:                                                    
-      path: "disclaimer"
-    values:                                                   
+    values:
       sitemap: false
-  -                                                           
-    scope:                                                    
+  -
+    scope: 
+      path: "/disclaimer/"
+    values:
+      sitemap: false
+  -
+    scope: 
       path: "accessibility-statement"
-    values:                                                   
-      sitemap: false                                          
-  -                                                           
-    scope:                                                    
-      path: "*_page-template"                                 
-    values:                                                   
-      sitemap: false                                          
-
+    values:
+      sitemap: false
+  -
+    scope: 
+      path: "404"
+    values:
+      sitemap: false
+  -
+    scope: 
+      path: "disclaimer"
+    values:
+      sitemap: false
+  -
+    scope: 
+      path: "disclaimer"
+    values:
+      sitemap: false
+  -
+    scope: 
+      path: "blog/category"
+    values:
+      sitemap: false
+  -
+    scope: 
+      path: "thank-you"
+    values:
+      sitemap: false
+  -
+    scope: 
+      path: "googledbff74931dcd3fee.html"
+    values:
+      sitemap: false
 
 # Exclude from processing.
 # The following items will not be processed, by default.
