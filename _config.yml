@@ -35,21 +35,13 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 
-# Sets the Website Permalink:
+# Sets the Website Permalink ALSO NEED TO UPDATE PAGES COLLECTION
 permalink: /blog/:year/:month/:day/:title:output_ext
 
 # Blocks future dated posts from being published early
 future: false
 
-# Build settings
-theme: minima
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-
-# Sets the Website Permalink:
-permalink: /blog/:year/:month/:day/:title/
-
+# Sets the pages collection permalinks should match website permalink
 collections:
   pages:
     output: true
