@@ -45,7 +45,7 @@ future: false
 collections:
   pages:
     output: true
-    permalink: /:path/
+    permalink: /:path:output_ext
 
 sass:
   style: comrpessed 
