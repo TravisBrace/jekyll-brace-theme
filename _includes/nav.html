@@ -2,8 +2,17 @@
 	<img class="logo" />
 	<div class="links">
 		{% for link in site.data.desktop-menu.desktopmenu %}
-			{% if link.submenu[0] %}
-				<div class="dropdown-container">
+			{% if link.submenu[0] && link.url == null %}
+				<div class="dropdown-container" onclick>
+					<div>{{ link.pagename }}</div>
+					<div class="dropdown">
+						{% for submenulink in link.submenu %}
+							<a href="{{ site.baseurl }}{{ submenulink.url }}">{{ submenulink.pagename }}</a>
+						{% endfor %}
+					</div>
+				</div>
+			{% elsif link.submenu[0] %}
+				<div class="dropdown-container" onclick>
 					<a href="{{ site.baseurl }}{{ link.url }}">{{ link.pagename }}</a>
 					<div class="dropdown">
 						{% for submenulink in link.submenu %}
