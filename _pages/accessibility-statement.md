@@ -85,4 +85,4 @@ If you have experienced any accessibility barriers while using any part of our w
 
 Phone: +1-888-375-3835\
 E-mail: <accessibility@fuelwebmarketing.com>\
-Get in touch with us at: <https://www.fuelwebmarketing.com/contact.html>
+Get in touch with us at: <https://www.fuelwebmarketing.com/contact-fuel.html>
