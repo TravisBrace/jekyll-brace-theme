@@ -109,14 +109,6 @@ header .sidebar-nav li{list-style:none;margin:3vw 0;padding-bottom:.8vw}
 nav > div.button{position:fixed;top:13vw;z-index:8;width:100%;padding:2vw;text-align:center;background-color:blue;color:white;font-size:3.7vw;height:auto;border-bottom:0;box-shadow:0 3px 6px rgba(0,0,0,0.16),0 3px 6px rgba(0,0,0,0.23)}
 .fa-chevron-up{width:3vw;margin-right:1vw;transform:rotateX(180deg);transition:transform .5s ease}
 
-@media (max-width:850px){
-	nav.desktop-nav{display:none}
-	nav.mobile-header{display:block}
-	header.header-post{display:block}
-	body{padding-top:21.4vw}
-}
-
-
 /*****************
 INTERNAL PAGES
 *****************/
