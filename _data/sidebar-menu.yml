@@ -1,1 +1,12 @@
 sidebarmenu:
+ - pagename: Example1
+   url: /exampleurl/ 
+   submenu:
+    - pagename: Example
+      url: /exampleurl/
+ - pagename: Example1
+   url: /exampleurl/ 
+ - pagename: Example1
+   url: /exampleurl/ 
+ - pagename: Example1
+   url: /exampleurl/ 

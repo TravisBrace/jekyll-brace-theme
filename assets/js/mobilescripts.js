@@ -39,3 +39,16 @@ function mobileNavSlideUp() {
  //document.querySelector('div.mobile-nav-screen').setAttribute('style', 'display:none;');
  //document.querySelector('div.mobile-nav-screen').setAttribute('onclick', 'bodyFunctions()');
 }
+
+function mobilePracticeAreasOpen(e) {
+  e.firstElementChild.setAttribute('style', 'transform:rotateZ(0deg);');
+  e.setAttribute('onclick', 'mobilePracticeAreasClose(this)');
+  e.nextElementSibling.nextElementSibling.setAttribute('style', 'display:block;');
+}
+
+function mobilePracticeAreasClose(e) {
+  e.firstElementChild.setAttribute('style', '');
+  e.setAttribute('onclick', 'mobilePracticeAreasOpen(this)');
+  e.nextElementSibling.nextElementSibling.setAttribute('style', 'display:none;');
+}
+

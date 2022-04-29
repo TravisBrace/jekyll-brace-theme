@@ -30,7 +30,7 @@
                   }
                 }
               };
-              xhttp.open("GET", "/~reynalawfirm/blog/", true);
+              xhttp.open("GET", "/blog/", true);
               xhttp.send();
             }
     
