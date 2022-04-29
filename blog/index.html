@@ -14,3 +14,25 @@ titlebar: Law Blog
 		<p>{{ post.content | strip_html | truncatewords: 50 }}</p>
 	</article>
 {% endfor %}
+
+<script>
+
+	var postArray = Array.from(document.querySelectorAll('article'));
+	var postHideNumber = 7;
+	for (var i in postArray) {
+		if (i > 7) {
+			postArray[i].setAttribute('style', 'display:none;');
+		}
+	}
+	document.querySelector('.main-content-container').insertAdjacentHTML('beforeend', '<div class="showPostsButton" onclick="showPosts();">Load More</div>');
+	function showPosts() {
+		postHideNumber = postHideNumber + 7;
+		for (var i in postArray) {
+			if (i < postHideNumber) {
+				postArray[i].setAttribute('style', 'display:block;');
+			}
+		}
+		if (postHideNumber > postArray.length) { document.querySelector('.showPostsButton').setAttribute('style', 'display:none;') }
+	}
+
+</script>
