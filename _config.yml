@@ -48,7 +48,7 @@ collections:
     permalink: /:path:output_ext
 
 sass:
-  style: comrpessed 
+  style: compressed 
 
 # Creates Default Frontmatter
 defaults:
