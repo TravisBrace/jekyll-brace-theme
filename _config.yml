@@ -62,6 +62,7 @@ defaults:
       description: "Need to add description: to page"
       category: "need to add category: to page"
       h1Headline: "need to add h1Headline: to page"
+      titlebar: "Need to add titlebar text"
   -
     scope:
       path: ""

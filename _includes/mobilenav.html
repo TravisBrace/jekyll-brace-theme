@@ -27,9 +27,9 @@
       </div>
       <div class="mobile-nav-screen" onclick="bodyFunctions()" style="display:none;"></div>
       <div class="mobile-nav" style="top: -220vw;">
-		  {% for link site.data.mobile-menu.mobilemneu %}  
+		  {% for link in site.data.mobile-menu.mobilemneu %}  
 				<a href="{{ site.baseurl }}{{ link.url }}">{{ link.pagename }}</a>
-			{% endfor %}
+		  {% endfor %}
 	  </div>
     </nav>
     <div class="sidebar-nav"> <!-- copy and paste internalHTML from sidenav here -->
