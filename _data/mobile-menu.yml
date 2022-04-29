@@ -1,0 +1,18 @@
+mobilemenu:
+  - pagename: Home
+    url: /
+  - pagename: About
+    url: /about/
+  - pagename: Family Law
+    url: /family-law/
+  - pagename: Criminal Defense
+    url: /criminal-defense/
+  - pagename: Blog
+    url: /blog/
+  - pagename: Intake Form
+    url: /intake-form/
+  - pagename: Schedule Online
+    url: /schedule-online/
+  - pagename: Payments
+    url: /payments/
+	

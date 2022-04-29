@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Home
+titletag: NEEDS TITLE TAG
 description: Jekyll Framework Homepage
 canonical: https://example.com/
 permalink: /
