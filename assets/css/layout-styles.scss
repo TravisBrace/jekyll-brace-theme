@@ -25,7 +25,7 @@ GENERAL STYLES
 @font-face{
 	font-family:'ENTER FONT FAMILY';
 	font-display:swap;
-	src:url('{{ site.baseurl }}assets/fonts/');
+	src:url('{{ site.baseurl }}/assets/fonts/');
 }
 body{margin:0;overflow-x:hidden}
 h1{font-size:3vw}
