@@ -1,5 +1,5 @@
 <nav class="desktop-nav">
-	<img class="logo" />
+	<a href="{{ site.baseurl }}/"><img class="logo" src="{{ site.baseurl }}/assets/images/logo.png" alt="Law Firm" /></a>
 	<div class="links">
 		{% for link in site.data.desktop-menu.desktopmenu %}
 			{% if link.submenu[0] && link.url == null %}
