@@ -1,8 +1,7 @@
 ---
 layout: page-full
 titletag: Disclaimer 
-description: 
-robots: noindex, follow 
+robots: noindex, nofollow
 ---
 
 # Disclaimer
