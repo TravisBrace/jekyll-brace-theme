@@ -1,6 +1,7 @@
 ---
 layout: page 
 title: Contact Page Template 
+titletag: Needs Titletag
 description: Contact Page Description
 titlebar: Contact Us
 ---
