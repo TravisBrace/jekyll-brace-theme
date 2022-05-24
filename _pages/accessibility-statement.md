@@ -1,7 +1,7 @@
 ---
 layout: page-full
 titletag: Accessibility Statement
-description: 
+robots: noindex, nofollow
 ---
 
 # Accessibility Statement
