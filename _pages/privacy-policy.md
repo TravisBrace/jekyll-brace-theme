@@ -1,8 +1,7 @@
 ---
 layout: page-full
 titletag: Privacy Policy 
-description: 
-robots: noindex, follow
+robots: noindex, nofollow
 ---
 
 Privacy Policy
