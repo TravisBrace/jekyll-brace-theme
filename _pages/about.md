@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+titletag: Needs Titletag
 description: About the new Fuel Web Jekyll CMS
 titlebar: About Page
 ---
