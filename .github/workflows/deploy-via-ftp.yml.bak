@@ -21,7 +21,7 @@ jobs:
     # - name: Generate the sitemap
     #   uses: cicirello/generate-sitemap@v1.8.0
     #   with:
-    #     base-url-path: https://www.tragoslaw.com/
+    #     base-url-path: https://www.ADDWEBSITEURLHERE.com/
 
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.1.0
